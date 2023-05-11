@@ -1,0 +1,19 @@
+@import "react-image-gallery/styles/scss/image-gallery.scss";
+.image-gallery-slide.center {
+  cursor: pointer;
+}
+.ant-modal-close-x {
+  display: none !important;
+}
+.thumbnail-modal {
+  border: 4px solid transparent;
+}
+.thumbnail-modal.active {
+  border: 4px solid #337ab7;
+}
+.nav-slide {
+  &:hover {
+    color: #337ab7 !important;
+    cursor: pointer;
+  }
+}

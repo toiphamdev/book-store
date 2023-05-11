@@ -1,0 +1,31 @@
+.input__search-wrapper {
+  .input__search-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+  }
+}
+
+.table__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .table__nav-btn-group {
+    display: flex;
+    align-items: center;
+
+    .table__nav-btn {
+      display: flex;
+      align-items: center;
+    }
+    .table__nav-btn + .table__nav-btn {
+      margin-left: 4px;
+    }
+  }
+}
+.hide-row {
+  display: none;
+}
