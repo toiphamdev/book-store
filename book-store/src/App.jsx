@@ -53,7 +53,7 @@ const Layout = () => {
 function App() {
   const dispatch = useDispatch();
   const isLoading = useSelector((state) => state.account.isLoading);
-  const isAuthenticated = useSelector((state) => state.account.isAuthenticated);
+  const isAuthenticated = localStorage.getItem("access_token");
 
   const router = createBrowserRouter([
     {
