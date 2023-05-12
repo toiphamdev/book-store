@@ -109,7 +109,7 @@ const OrderPage = () => {
                     <div className="quantity-wrapper">
                       <div style={{ marginLeft: "8px" }}>
                         <InputNumber
-                          style={{ width: "40px" }}
+                          className="customize-input"
                           onChange={(e) => handleQuantityChange(e, item)}
                           value={item.quantity}
                         />
