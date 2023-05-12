@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { Col, Rate, Row, message } from "antd";
 import "./book.scss";
@@ -18,6 +18,7 @@ const BookPage = () => {
   const [book, setBook] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleQuantityChange = (type, e) => {
@@ -154,7 +155,15 @@ const BookPage = () => {
                   <BsCartPlus />
                   <span>Thêm vào giỏ hàng</span>
                 </button>
-                <button className="btn btn-solid-red">Mua ngay</button>
+                <button
+                  onClick={() => {
+                    handleAddToCart(quantity, book);
+                    navigate("/order");
+                  }}
+                  className="btn btn-solid-red"
+                >
+                  Mua ngay
+                </button>
               </Col>
             </Row>
           </Col>

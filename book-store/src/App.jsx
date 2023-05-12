@@ -53,6 +53,7 @@ const Layout = () => {
 function App() {
   const dispatch = useDispatch();
   const isLoading = useSelector((state) => state.account.isLoading);
+  const isAuthenticated = useSelector((state) => state.account.isAuthenticated);
 
   const router = createBrowserRouter([
     {
@@ -145,7 +146,9 @@ function App() {
         dispatch(doGetAccountAction(res.data.user));
       }
     };
-    getAccount();
+    if (isAuthenticated) {
+      getAccount();
+    }
   }, []);
 
   return (
